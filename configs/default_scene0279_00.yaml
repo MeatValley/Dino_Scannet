@@ -1,0 +1,32 @@
+# Details of the experiment for better trackability
+experiment:
+  name:  "Default"  #Name of the inference
+  scene: "s0279_00"
+
+# Parameters of the bounding box prediction 
+pipeline:
+  clustering:
+    algo: "kmeans"  # Clustering algorithm, here kmeans
+    k: 2            # Number of centroids
+    init_centroids: "++"
+  feature_extractor:
+    network: "DINO"
+    model: "vits8"
+
+# Details of the data
+data:
+  name: ["ScanNet"]
+  path: "data/scene0279_00"
+  point_cloud_name: "scene0279_00_vh_clean_2.labels.ply"
+  point_cloud:
+    path: "data/scene0279_00/scene0279_00_vh_clean_2.labels.ply"  # path leading to point cloud
+  images:
+    path: "data/images"        # path leading to images
+
+# Logs details
+save:    # logs folder
+  point_cloud: True      # Flag
+  images: True           # Flag
+
+
+  
