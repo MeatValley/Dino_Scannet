@@ -1,6 +1,0 @@
-experiment:
-  name: "test"
-
-
-save:
-  folder: "configs/tests_pc"
